@@ -22,6 +22,13 @@ public class ExamTest {
 		page.CheckBoxVerification();
 		
 	}
+	
+	@Test
+	public void removeCheckBoxTest() {
+		
+		
+	}
+	
 }
 
 

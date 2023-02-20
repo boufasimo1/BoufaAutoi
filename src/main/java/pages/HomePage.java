@@ -21,14 +21,14 @@ public class HomePage {
 
 	
 
-	@FindBy (how = How.XPATH , using= "/html/body/div[3]/input[3]") WebElement Toggle_All_Checkbox ;
+	@FindBy (how = How.XPATH, using= "/html/body/div[3]/input[3]") WebElement Toggle_All_Checkbox ;
 	@FindBy (how = How.XPATH , using= "//*[@id=\"todos-content\"]/form/ul/li[1]/input") WebElement Toggle_Checkbox ;
 	
 	public void clickOnToggleAllCheckBox () {
 		
 		Toggle_All_Checkbox.click();
 	}
-	public void CheckBoxVerification() {
+	public ArrayList<WebElement> CheckBoxListData() {
 		
 		ArrayList<WebElement> fileData = new ArrayList<WebElement>();
 		int i =2;
@@ -40,7 +40,17 @@ public class HomePage {
 			Toggle_Checkbox = driver.findElement(By.xpath("//*[@id=\"todos-content\"]/form/ul/li["+i+"]/input"));
 			
 			i++;}}catch (Exception e) {System.out.println(i);}
+		return fileData;
 		
+		
+		
+	
+	}
+	
+	public void CheckBoxVerification() {
+		
+		ArrayList<WebElement> fileData = new ArrayList<WebElement>();
+		fileData=CheckBoxListData();
 		
 		for(int j=0;j<fileData.size();j++) {
 				fileData.get(j).isDisplayed();
@@ -53,7 +63,6 @@ public class HomePage {
 			}
 			
 		
-	
 	}
 
 	}
