@@ -18,8 +18,8 @@ public class ExamTest {
 		
 		HomePage page = PageFactory.initElements(driver, HomePage.class);
 	
-//		page.clickOnToggleAllCheckBox();
-		page.CheckBoxVerification2();
+		page.clickOnToggleAllCheckBox();
+		page.CheckBoxVerification();
 		
 	}
 }

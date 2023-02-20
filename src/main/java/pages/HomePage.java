@@ -28,7 +28,7 @@ public class HomePage {
 		
 		Toggle_All_Checkbox.click();
 	}
-	public ArrayList<WebElement> CheckBoxVerification() {
+	public void CheckBoxVerification() {
 		
 		ArrayList<WebElement> fileData = new ArrayList<WebElement>();
 		int i =2;
@@ -42,16 +42,6 @@ public class HomePage {
 			i++;}}catch (Exception e) {System.out.println(i);}
 		
 		
-
-			
-		return fileData;
-	
-	}
-	public void CheckBoxVerification2() {
-		
-		
-		ArrayList<WebElement> fileData= CheckBoxVerification();
-		fileData.get(0).click();
 		for(int j=0;j<fileData.size();j++) {
 				fileData.get(j).isDisplayed();
 				if (fileData.get(j).isSelected()) {
@@ -61,6 +51,10 @@ public class HomePage {
 					System.out.println("checkbox"+j+"is not selected");
 				}
 			}
+			
+		
+	
 	}
+
 	}
 	
